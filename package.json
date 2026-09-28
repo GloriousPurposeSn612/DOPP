@@ -1,0 +1,12 @@
+{
+  "name": "dopp-class-registration",
+  "version": "1.0.0",
+  "description": "Semester 5 DOPP class registration web application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
