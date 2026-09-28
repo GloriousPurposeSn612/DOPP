@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOPP Class Registration</title>
+    <link rel="icon" href="skit.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1>DOPP Class Registration</h1>
+      <button
+        id="themeButton"
+        class="theme-button"
+        type="button"
+        aria-label="Toggle theme"
+      >
+        🌙
+      </button>
+    </header>
+    <main class="container">
+      <!-- Sign In -->
+      <section id="signInPage" class="auth-page">
+        <div class="card">
+          <h2>Sign In</h2>
+          <p class="subtitle">Sign in to access your DOPP class details.</p>
+          <form id="signInForm">
+            <div class="form-group">
+              <label for="signInEmail">College Email</label>
+              <input
+                type="email"
+                id="signInEmail"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="signInPassword">Password</label>
+              <input
+                type="password"
+                id="signInPassword"
+                name="password"
+                inputmode="numeric"
+                maxlength="4"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <p id="signInMessage" class="message"></p>
+            <button type="submit" class="primary-button">Sign In</button>
+          </form>
+          <p class="switch-page">
+            Not registered yet?
+            <button id="showSignUpButton" class="link-button" type="button">
+              Sign Up
+            </button>
+          </p>
+        </div>
+      </section>
+      <!-- Sign Up -->
+      <section id="signUpPage" class="auth-page hidden">
+        <div class="card">
+          <h2>Sign Up</h2>
+          <p class="subtitle">Register for the Semester 5 DOPP class.</p>
+          <form id="signUpForm">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                maxlength="20"
+                autocomplete="given-name"
+                required
+              />
+              <small class="constraint"> 3–20 capital letters only. </small>
+              <p id="firstNameMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                maxlength="20"
+                autocomplete="family-name"
+                required
+              />
+              <small class="constraint"> 3–20 capital letters only. </small>
+              <p id="lastNameMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="collegeEmail">College Email</label>
+              <input
+                type="email"
+                id="collegeEmail"
+                name="email"
+                autocomplete="email"
+                required
+              />
+              <small class="constraint"> Enter a valid email address. </small>
+              <p id="collegeEmailMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phone"
+                inputmode="numeric"
+                maxlength="10"
+                autocomplete="tel"
+                required
+              />
+              <small class="constraint"> Exactly 10 digits. </small>
+              <p id="phoneNumberMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="program">Program</label>
+              <select id="program" name="program" required>
+                <option value="" selected disabled>Select Program</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="PHD">PHD</option>
+              </select>
+              <small class="constraint"> Select B.Tech, M.Tech, or PHD. </small>
+              <p id="programMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="branch">Branch</label>
+              <select id="branch" name="branch" required>
+                <option value="" selected disabled>Select Branch</option>
+                <option value="CS">CS</option>
+                <option value="CS-AI">CS-AI</option>
+                <option value="CS-IT">CS-IT</option>
+                <option value="CS-DS">CS-DS</option>
+                <option value="CS-IOT">CS-IOT</option>
+                <option value="EE">EE</option>
+                <option value="ME">ME</option>
+                <option value="CE">CE</option>
+              </select>
+              <small class="constraint">
+                Select one of the available branches.
+              </small>
+              <p id="branchMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="yearOfAdmission">Year Of Admission</label>
+              <input
+                type="number"
+                id="yearOfAdmission"
+                name="yearOfAdmission"
+                min="2000"
+                max="2030"
+                step="1"
+                required
+              />
+              <small class="constraint">
+                Year must be between 2000 and 2030.
+              </small>
+              <p id="yearOfAdmissionMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="section">Section</label>
+              <input
+                type="text"
+                id="section"
+                name="section"
+                maxlength="1"
+                required
+              />
+              <small class="constraint">
+                One capital letter from A to T.
+              </small>
+              <p id="sectionMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="createPassword">Create Password</label>
+              <input
+                type="password"
+                id="createPassword"
+                name="password"
+                inputmode="numeric"
+                maxlength="4"
+                autocomplete="new-password"
+                required
+              />
+              <small class="constraint"> Exactly 4 digits. </small>
+              <p id="createPasswordMessage" class="field-message"></p>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                inputmode="numeric"
+                maxlength="4"
+                autocomplete="new-password"
+                required
+              />
+              <small class="constraint">
+                Must exactly match the created password.
+              </small>
+              <p id="confirmPasswordMessage" class="field-message"></p>
+            </div>
+            <p id="signUpMessage" class="message"></p>
+            <button type="submit" class="primary-button">Create Account</button>
+          </form>
+          <p class="switch-page">
+            Already registered?
+            <button id="showSignInButton" class="link-button" type="button">
+              Sign In
+            </button>
+          </p>
+        </div>
+      </section>
+      <!-- Main Page -->
+      <section id="mainPage" class="main-page hidden">
+        <div class="welcome-card">
+          <h2>
+            Welcome to the DevOps Practices &amp; Principles(DOPP) class of
+            semester 5!!!
+          </h2>
+          <p>Your registration details are shown below.</p>
+        </div>
+        <div class="details-card">
+          <div class="details-header">
+            <h2>Student Details</h2>
+            <button id="signOutButton" class="sign-out-button" type="button">
+              Sign Out
+            </button>
+          </div>
+          <div class="details-grid">
+            <div class="detail-item">
+              <span>First Name</span>
+              <strong id="displayFirstName">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Last Name</span>
+              <strong id="displayLastName">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>College Email</span>
+              <strong id="displayEmail">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Phone Number</span>
+              <strong id="displayPhone">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Program</span>
+              <strong id="displayProgram">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Branch</span>
+              <strong id="displayBranch">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Year Of Admission</span>
+              <strong id="displayYear">-</strong>
+            </div>
+            <div class="detail-item">
+              <span>Section</span>
+              <strong id="displaySection">-</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
